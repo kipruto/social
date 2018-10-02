@@ -17,6 +17,7 @@ class UserModelTestCase(unittest.TestCase):
         db.drop_all()
         self.app_context.pop()
 
+    # Authentication Testing
     def test_password_setter(self):
         u = User(password='cat')
         self.assertTrue(u.password_hash is not None)
@@ -104,6 +105,7 @@ class UserModelTestCase(unittest.TestCase):
         self.assertFalse(u2.change_email(token))
         self.assertTrue(u2.email == 'susan@example.org')
 
+    # Role and User Testing
     def test_user_role(self):
         u = User(email='john@example.com', password='cat')
         self.assertTrue(u.can(Permission.FOLLOW))

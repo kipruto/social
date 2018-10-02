@@ -11,7 +11,7 @@ class Config:
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     SOCIAL_MAIL_SUBJECT_PREFIX = '[Social]'
-    SOCIAL_MAIL_SENDER = 'Social Admin <social@example.com>'
+    SOCIAL_MAIL_SENDER = 'Social Admin <barxwells@gmail.com>'
     SOCIAL_ADMIN = os.environ.get('SOCIAL_ADMIN')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -41,5 +41,6 @@ config = {
     'development': DevelopmentConfig,
     'testing': TestingConfig,
     'production': ProductionConfig,
+
     'default': DevelopmentConfig
 }
