@@ -14,6 +14,8 @@ class Config:
     SOCIAL_MAIL_SENDER = 'Social Admin <barxwells@gmail.com>'
     SOCIAL_ADMIN = os.environ.get('SOCIAL_ADMIN')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SOCIAL_POSTS_PER_PAGE = 20
+    SOCIAL_FOLLOWERS_PER_PAGE = 50
 
     @staticmethod
     def init_app(app):
