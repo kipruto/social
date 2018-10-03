@@ -12,6 +12,11 @@
                     post.author.username }}</a></div>
             <div class="post-body">{{ post.body }}</div>
         </div>
+        <div class="post-footer">
+            <a href="{{ url_for('.post', id=post.id) }}#comments">
+                <span class="label label-primary">{{ post.comments.count() }} Comments</span>
+            </a>
+        </div>
     </li>
     {% endfor %}
 </ul>
